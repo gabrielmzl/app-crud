@@ -24,8 +24,6 @@
         End If
     End Sub
 
-
-
     Private Sub dataGridViewClientes_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles dataGridViewClientes.DoubleClick
         Dim formEditar As New FormEditar(Id)
         formEditar.Show()
