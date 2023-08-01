@@ -14,7 +14,7 @@
         End Try
     End Sub
 
-    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FormListar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CarregarTabela()
     End Sub
 
@@ -24,12 +24,12 @@
         End If
     End Sub
 
-    Private Sub dataGridViewClientes_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles dataGridViewClientes.DoubleClick
+    Private Sub TabelaDuploClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles dataGridViewClientes.DoubleClick
         Dim formEditar As New FormEditar(Id)
         formEditar.Show()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Botao2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If Id = 0 Then
             MessageBox.Show("Selecione um cliente.", "Erro")
             Return
@@ -47,13 +47,13 @@
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Botao1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim formEditar As New FormEditar(Id)
 
         formEditar.Show()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Botao3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         CarregarTabela()
     End Sub
 End Class

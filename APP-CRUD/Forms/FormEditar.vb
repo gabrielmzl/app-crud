@@ -9,7 +9,7 @@
         Id = idCliente
     End Sub
 
-    Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FormEditar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Id = 0 Then
             MessageBox.Show("Selecione um cliente.", "Erro")
             Close()
@@ -38,7 +38,7 @@
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Botao2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim cliente = controller.BuscarPorId(Id)
 
         Dim Nome As String = TextBox1.Text

@@ -2,7 +2,7 @@
 
     Dim controller As New ClienteController()
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Botao1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim Nome As String = TextBox1.Text
         Dim Cep As String = MaskedTextBox1.Text
         Dim Endereco As String = TextBox3.Text
