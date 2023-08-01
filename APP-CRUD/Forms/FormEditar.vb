@@ -11,7 +11,7 @@
 
     Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Id = 0 Then
-            MessageBox.Show("Selecione um cliente.")
+            MessageBox.Show("Selecione um cliente.", "Erro")
             Close()
         Else
             Try
@@ -32,7 +32,7 @@
                 MaskedTextBox5.Text = cliente.nascimento
 
             Catch ex As Exception
-                MessageBox.Show("Ocorreu um erro ao tentar encontrar odss ID, tente novamente mais tarde.", "Erro")
+                MessageBox.Show("Ocorreu um erro ao tentar encontrar os IDs, tente novamente mais tarde.", "Erro")
                 Close()
             End Try
         End If

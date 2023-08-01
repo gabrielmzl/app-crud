@@ -8,10 +8,10 @@ Imports System.Runtime.InteropServices
 
 ' Revise os valores dos atributos do assembly
 
-<Assembly: AssemblyTitle("APP-CRUD")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("APP-CRUD")>
+<Assembly: AssemblyTitle("Consulta de Clientes")>
+<Assembly: AssemblyDescription("Aplicativo de consulta de clientes")>
+<Assembly: AssemblyCompany("Gabriel")>
+<Assembly: AssemblyProduct("Consulta de Clientes")>
 <Assembly: AssemblyCopyright("Copyright ©  2023")>
 <Assembly: AssemblyTrademark("")>
 
@@ -31,5 +31,5 @@ Imports System.Runtime.InteropServices
 ' usando o "*" como mostrado abaixo:
 ' <Assembly: AssemblyVersion("1.0.*")>
 
-<Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyVersion("1.1.1.1")>
+<Assembly: AssemblyFileVersion("2.1.0.0")>

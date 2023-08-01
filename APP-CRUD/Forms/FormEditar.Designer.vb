@@ -298,7 +298,7 @@ Partial Class FormEditar
         'MaskedTextBox3
         '
         Me.MaskedTextBox3.Location = New System.Drawing.Point(241, 133)
-        Me.MaskedTextBox3.Mask = "00.000.000-0"
+        Me.MaskedTextBox3.Mask = "00,000,000-0"
         Me.MaskedTextBox3.Name = "MaskedTextBox3"
         Me.MaskedTextBox3.Size = New System.Drawing.Size(168, 20)
         Me.MaskedTextBox3.TabIndex = 10
@@ -315,7 +315,7 @@ Partial Class FormEditar
         'MaskedTextBox4
         '
         Me.MaskedTextBox4.Location = New System.Drawing.Point(240, 185)
-        Me.MaskedTextBox4.Mask = "000.000.000-00"
+        Me.MaskedTextBox4.Mask = "000,000,000-00"
         Me.MaskedTextBox4.Name = "MaskedTextBox4"
         Me.MaskedTextBox4.Size = New System.Drawing.Size(168, 20)
         Me.MaskedTextBox4.TabIndex = 11

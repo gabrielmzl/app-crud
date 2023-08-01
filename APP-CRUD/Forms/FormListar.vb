@@ -3,11 +3,10 @@
     Dim Id As Integer
     Dim controller As New ClienteController()
 
-    Private Sub CarregarTabela()
+    Public Sub CarregarTabela()
         Try
             Dim clientes = controller.Buscar()
 
-            dataGridViewClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect
             dataGridViewClientes.DataSource = clientes
         Catch ex As Exception
             MessageBox.Show("Ocorreu um erro ao carregar os clientes, tente novamente mais tarde...", "Erro")
@@ -19,13 +18,22 @@
         CarregarTabela()
     End Sub
 
-    Public Sub PegarId(sender As Object, e As DataGridViewCellEventArgs) Handles dataGridViewClientes.CellContentClick
-        Id = Convert.ToInt32(dataGridViewClientes.Rows(e.RowIndex).Cells(0).Value)
+    Public Sub PegarId(sender As Object, e As EventArgs) Handles dataGridViewClientes.SelectionChanged
+        If dataGridViewClientes.SelectedRows.Count > 0 Then
+            Id = CInt(dataGridViewClientes.SelectedRows(0).Cells("id").Value)
+        End If
+    End Sub
+
+
+
+    Private Sub dataGridViewClientes_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles dataGridViewClientes.DoubleClick
+        Dim formEditar As New FormEditar(Id)
+        formEditar.Show()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If Id = 0 Then
-            MessageBox.Show("Selecione um cliente.")
+            MessageBox.Show("Selecione um cliente.", "Erro")
             Return
         Else
             Dim confirmaExclusao As DialogResult = MessageBox.Show("Deseja excluir o id " & Id & "?", "Confirma", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
